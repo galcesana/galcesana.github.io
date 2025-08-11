@@ -83,4 +83,4 @@ MIT License. See [LICENSE](LICENSE) for details.
 
 ## Acknowledgments
 
-Thanks for dropping by—feel free to explore my projects and connect with me via GitHub or LinkedIn!
+Thanks for dropping by and feel free to explore my projects and connect with me via GitHub or LinkedIn!
