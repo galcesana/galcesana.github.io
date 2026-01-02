@@ -110,6 +110,9 @@ a{color:inherit; text-decoration:none}
   margin-top: -2.5rem; /* Move the hero text up */
   text-align: left;
 }
+.hero__img-link { display: inline-block; }
+.hero__img-link img { cursor: pointer; transition: transform .15s ease, filter .15s ease; }
+.hero__img-link:hover img { transform: translateY(-2px); filter: brightness(1.05); }
 
 @media (max-width: 900px){
   .hero__grid{grid-template-columns:1fr; text-align:center}
