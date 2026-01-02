@@ -31,14 +31,14 @@ if (navToggle && navMenu) {
   });
 }
 
-// Theme: prefer saved, else system
-const themeBtn = document.getElementById('themeToggle');
-const root = document.documentElement;
-const storedTheme = localStorage.getItem('theme');
-const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-function setTheme(mode){ root.setAttribute('data-theme', mode); localStorage.setItem('theme', mode); }
-setTheme(storedTheme || (systemDark ? 'dark' : 'light'));
-if (themeBtn){ themeBtn.addEventListener('click', ()=> setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark')); }
+// // Theme: prefer saved, else system
+// const themeBtn = document.getElementById('themeToggle');
+// const root = document.documentElement;
+// const storedTheme = localStorage.getItem('theme');
+// const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+// function setTheme(mode){ root.setAttribute('data-theme', mode); localStorage.setItem('theme', mode); }
+// setTheme(storedTheme || (systemDark ? 'dark' : 'light'));
+// if (themeBtn){ themeBtn.addEventListener('click', ()=> setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark')); }
 
 // IntersectionObserver for reveal animations
 const io = new IntersectionObserver((entries)=>{
