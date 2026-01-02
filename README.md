@@ -1,86 +1,54 @@
-# galcesana.github.io
+# Portfolio site
 
-**Personal Portfolio**
+Static personal portfolio site built with plain HTML/CSS/JS (no framework, no build step).
 
-A clean and responsive portfolio website showcasing my work and background, built with HTML, CSS, and JavaScript and hosted via GitHub Pages.
+## Live
 
----
+- https://galcesana.com
 
-## Live Demo
+## Files
 
-Visit the live site here:  
-https://galcesana.github.io
-
----
-
-## Project Structure
-
-```
-galcesana.github.io/
-├── assets/         ← Images, icons, or other static files
-├── index.html      ← Main landing page
-├── style.css       ← Stylesheets
-└── script.js       ← Interactive behaviors (e.g., nav toggles, animations)
+```txt
+.
+├─ index.html
+├─ style.css
+├─ script.js
+└─ assets/
+   └─ images/
 ```
 
----
+## Run locally
 
-## Built With
+### Option 1: open the file
 
-- **HTML** — Content structure and semantic layout
-- **CSS** — Styling and responsive design
-- **JavaScript** — Dynamic interactivity and user experience enhancements
+Open `index.html` in your browser.
 
----
+### Option 2: local server (recommended)
 
-## Features
+From the project folder:
 
-- Fully responsive design for desktop and mobile viewing
-- Aesthetic layout that highlights projects and personal milestones
-- Lightweight and fast-loading—designed for simplicity and speed
-- Easy to customize and extend with additional pages or functionality
+**PowerShell**
 
----
-
-## Getting Started
-
-To run locally:
-
-1. Clone the repository
-   ```bash
-   git clone https://github.com/galcesana/galcesana.github.io.git
-   cd galcesana.github.io
-   ```
-2. Open `index.html` in your preferred browser.
-
-_No build tools required—just static files!_
-
----
-
-## Customization Tips
-
-- **Content**: Modify `index.html` to update your bio, projects, or contact details.
-- **Styles**: Tweak `style.css` to adjust themes, fonts, or layout.
-- **Scripts**: Edit `script.js` for custom animations or interactive elements.
-
----
-
-## Deployment
-
-Automatically deployed via **GitHub Pages**—push to the `main` branch and your updates go live at:
-
-```
-https://galcesana.github.io
+```powershell
+python -m http.server 8000
 ```
 
----
+Open:
 
-## License
+- http://localhost:8000
 
-MIT License. See [LICENSE](LICENSE) for details.
+If `python` is not found, try:
 
----
+```powershell
+py -m http.server 8000
+```
 
-## Acknowledgments
+## Edit
 
-Thanks for dropping by and feel free to explore my projects and connect with me via GitHub or LinkedIn!
+- Content/sections/links: `index.html`
+- Styling/responsive layout: `style.css`
+- Interactions (menu, reveal animations, etc.): `script.js`
+
+## Notes
+
+- The profile photo can be wrapped in a link to a Google Maps location.
