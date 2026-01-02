@@ -432,3 +432,17 @@ a{color:inherit; text-decoration:none}
   .card:hover{transform:none}
   .section{opacity:1; transform:none; transition:none}
 }
+
+/* --- Fix: center profile photo on mobile (image is wrapped in .hero__img-link) --- */
+@media (max-width: 900px){
+  .hero__img-link{
+    display: block;
+    width: fit-content;
+    margin: 0 auto;       /* centers the wrapper */
+    justify-self: center; /* centers inside the grid */
+  }
+
+  .hero__img{
+    margin: 0 auto;       /* extra safety */
+  }
+}
