@@ -354,6 +354,22 @@ a{color:inherit; text-decoration:none}
   gap: 2rem;
 }
 
+.projects__subheading{
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.projects__divider{
+  height: 1px;
+  width: min(700px, 100%);
+  margin: 2.5rem auto 1.25rem;
+  background: rgba(255,255,255,.10);
+}
+
+
 .project__content{margin-top:.75rem}
 .project__actions{display:flex; gap:.75rem; flex-wrap:wrap; margin-top:.5rem; justify-content: center}
 
