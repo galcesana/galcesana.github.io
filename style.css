@@ -170,11 +170,41 @@ a{color:inherit; text-decoration:none}
 .projects__grid {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .project__content{margin-top:.75rem}
 .project__actions{display:flex; gap:.75rem; flex-wrap:wrap; margin-top:.5rem; justify-content: center}
+
+/* HydroTrack: side-by-side screenshots */
+.hydrotrack__media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 1rem auto;
+  overflow: hidden;
+  border-radius: 0.9rem;
+}
+
+.hydrotrack__media img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  display: block;
+  border-radius: 0;
+  background: transparent;
+}
+
+.hydrotrack__media img:first-child {
+  border-radius: 0;
+}
+
+.hydrotrack__media img:last-child {
+  border-radius: 0;
+}
 
 /* Buttons */
 .btn{display:inline-block; padding:.7rem 1rem; border-radius:.75rem; background:var(--primary); color:#fff; font-weight:600; border:1px solid transparent; transition:background .2s, transform .15s}
