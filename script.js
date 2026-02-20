@@ -23,7 +23,7 @@ if (navToggle && navMenu) {
     const isClickInsideMenu = navMenu.contains(e.target);
     const isClickOnToggle = navToggle.contains(e.target);
     const isMenuOpen = navToggle.getAttribute('aria-expanded') === 'true';
-    
+
     if (isMenuOpen && !isClickInsideMenu && !isClickOnToggle) {
       navToggle.setAttribute('aria-expanded', 'false');
       navMenu.setAttribute('aria-expanded', 'false');
@@ -41,23 +41,23 @@ if (navToggle && navMenu) {
 // if (themeBtn){ themeBtn.addEventListener('click', ()=> setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark')); }
 
 // IntersectionObserver for reveal animations
-const io = new IntersectionObserver((entries)=>{
-  entries.forEach((e)=>{ if (e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target); }});
-},{ rootMargin: '0px 0px -10% 0px' });
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+}, { rootMargin: '0px 0px -10% 0px' });
 
-document.querySelectorAll('.reveal').forEach(el=> io.observe(el));
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
 // IntersectionObserver for section animations
-const sectionObserver = new IntersectionObserver((entries)=>{
-  entries.forEach((e)=>{ 
-    if (e.isIntersecting){ 
-      e.target.classList.add('in-view'); 
-      sectionObserver.unobserve(e.target); 
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in-view');
+      sectionObserver.unobserve(e.target);
     }
   });
-},{ rootMargin: '0px 0px -15% 0px', threshold: 0.1 });
+}, { rootMargin: '0px 0px -15% 0px', threshold: 0.1 });
 
-document.querySelectorAll('section').forEach(section=> {
+document.querySelectorAll('section').forEach(section => {
   // Check if section is already in view on page load
   const rect = section.getBoundingClientRect();
   const isInView = rect.top < window.innerHeight * 0.8 && rect.bottom > 0;
@@ -71,3 +71,46 @@ document.querySelectorAll('section').forEach(section=> {
 // Current year in footer
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// Sheep Easter Egg
+const sheepLogo = document.getElementById('sheep-logo');
+const sheepLink = document.getElementById('sheep-logo-link');
+
+if (sheepLogo && sheepLink) {
+  let clickCount = 0;
+  sheepLink.addEventListener('click', (e) => {
+    e.preventDefault(); // keep from scrolling to top
+    clickCount++;
+
+    // Add a tiny bounce effect immediately on click
+    sheepLogo.style.transform = 'scale(0.8)';
+    setTimeout(() => {
+      sheepLogo.style.transform = '';
+    }, 150);
+
+    if (clickCount >= 1) {
+      clickCount = 0; // reset
+      spawnTumblingSheep();
+    }
+  });
+
+  function spawnTumblingSheep() {
+    for (let i = 0; i < 7; i++) {
+      setTimeout(() => {
+        const sheep = document.createElement('div');
+        sheep.textContent = '🐑';
+        sheep.className = 'tumbling-sheep';
+        // Randomize vertical position slightly
+        sheep.style.top = Math.random() * 80 + 10 + 'vh';
+        // adjust animation duration slightly for each
+        sheep.style.animationDuration = (2.5 + Math.random()) + 's';
+        document.body.appendChild(sheep);
+
+        // Remove after animation
+        setTimeout(() => {
+          sheep.remove();
+        }, 4000);
+      }, i * 400); // Stagger spawns
+    }
+  }
+}

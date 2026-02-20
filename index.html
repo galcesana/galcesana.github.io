@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang="en" data-theme="dark">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gal Cesana – Portfolio</title>
-  <meta name="description" content="Gal Cesana – software engineer & CS student. Projects, skills, resume, and contact." />
+  <meta name="description"
+    content="Gal Cesana – software engineer & CS student. Projects, skills, resume, and contact." />
   <meta name="theme-color" content="#0ea5e9" />
   <meta property="og:title" content="Gal Cesana – Portfolio" />
   <meta property="og:description" content="Software engineering, AI/ML projects, skills, resume, and contact." />
@@ -19,13 +21,14 @@
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="#" aria-label="Home">
-      <img src="assets/images/sheep.png" alt="">
+      <a class="logo" href="#" aria-label="Home" id="sheep-logo-link">
+        <img id="sheep-logo" src="assets/images/sheep.png" alt="Sheep Logo" style="transition: transform 0.15s ease;">
       </a>
 
 
@@ -36,11 +39,10 @@
           <span class="nav__bar" aria-hidden="true"></span>
         </button>
         <ul id="navMenu" class="nav__menu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#contact">Contact & Links</a></li>
+          <li><a href="#about">about me</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#resume">my resume</a></li>
+          <li><a href="#contact">some links</a></li>
         </ul>
       </nav>
 
@@ -52,23 +54,17 @@
     <!-- Hero -->
     <section class="hero section">
       <div class="container hero__grid">
-          <a
-          class="hero__img-link reveal"
-          href="https://maps.app.goo.gl/bL2xwou4VmHPNXcg8"
-          target="_blank"
-          rel="noopener"
-          aria-label="Open the photo location in Google Maps"
-          title="Open the photo location in Google Maps"
-        >
-          <img class="hero__img" src="assets/images/profile.jpg" width="210" height="270" alt="Portrait of Gal Cesana" />
+        <a class="hero__img-link reveal" href="https://maps.app.goo.gl/bL2xwou4VmHPNXcg8" target="_blank" rel="noopener"
+          aria-label="Open the photo location in Google Maps" title="Open the photo location in Google Maps">
+          <img class="hero__img" src="assets/images/profile.jpg" width="210" height="270"
+            alt="Portrait of Gal Cesana" />
         </a>
         <div class="hero__copy reveal">
           <h1 class="hero__title"> <span class="accent">Gal Cesana</span></h1>
           <p class="hero__lead">
-            Software Engineer Intern @<a href="https://www.crowdstrike.com/en-us/"
-             target="_blank" rel="noopener">CrowdStrike</a>
-            <br>& Computer Science student @<a href="https://en.huji.ac.il/"
-             target="_blank" rel="noopener">HUJI</a>
+            Software Engineer Intern @<a href="https://www.crowdstrike.com/en-us/" target="_blank"
+              rel="noopener">CrowdStrike</a>
+            <br>& Computer Science student @<a href="https://en.huji.ac.il/" target="_blank" rel="noopener">HUJI</a>
           </p>
           <div class="hero__cta">
             <a class="btn" href="#projects">See Projects</a>
@@ -81,15 +77,17 @@
     <!-- About -->
     <section id="about" class="section section--alt">
       <div class="container narrow reveal">
-        <h2>About Me</h2>
+        <h2>about me</h2>
         <p>
           I love building small web projects that are actually useful which you can check out down below :D
         </p>
         <p>
-          I’m currently a Software Engineering Intern at CrowdStrike, developing microservices for the Falcon platform in the Identity Protection product, where performance and reliability really matter.
+          I’m currently a Software Engineering Intern at CrowdStrike, developing microservices for the Falcon platform
+          in the Identity Protection product, where performance and reliability really matter.
         </p>
         <p>
-          I’m especially interested in machine learning and NLP, and I enjoy finding practical ways to integrate them into real products and workflows.
+          I’m especially interested in machine learning and NLP, and I enjoy finding practical ways to integrate them
+          into real products and workflows.
         </p>
         <p>
           When I’m not coding, you’ll probably find me running, playing basketball, or making music.
@@ -100,7 +98,7 @@
     <!-- Projects -->
     <section id="projects" class="section section--alt">
       <div class="container reveal">
-        <h2>Projects</h2>
+        <h2>projects</h2>
 
         <div class="projects__divider" aria-hidden="true"></div>
         <h3 class="projects__subheading">Personal Projects</h3>
@@ -108,40 +106,51 @@
         <div class="projects__grid">
           <!-- Project 1: Intern‑sheep -->
           <article class="project card">
-            <img loading="lazy" src="assets/images/intern-sheep.jpg" width="480" height="270" alt="Screenshot of Intern-sheep resume tailoring tool" />
+            <img loading="lazy" src="assets/images/intern-sheep.jpg" width="480" height="270"
+              alt="Screenshot of Intern-sheep resume tailoring tool" />
             <div class="project__content">
               <h3>The Resume Tailor</h3>
-              <p>A resume‑tailoring web tool that uses LLMs to adapt your CV to a specific job description. Built with Flask, Docker, LaTeX, and deployed on GCP.</p>
+              <p>A resume‑tailoring web tool that uses LLMs to adapt your CV to a specific job description. Built with
+                Flask, Docker, LaTeX, and deployed on GCP.</p>
               <div class="project__actions">
-                <a class="btn" href="https://cv-tailor-1093941780877.europe-west1.run.app/" target="_blank" rel="noopener">Live site</a>
+                <a class="btn" href="https://cv-tailor-1093941780877.europe-west1.run.app/" target="_blank"
+                  rel="noopener">Live site</a>
                 <!-- Optional: update to the public repo if available -->
-                <a class="btn btn--ghost" href="https://github.com/galcesana/intern-sheep.com" target="_blank" rel="noopener">Code</a>
+                <a class="btn btn--ghost" href="https://github.com/galcesana/intern-sheep.com" target="_blank"
+                  rel="noopener">Code</a>
               </div>
             </div>
           </article>
 
           <!-- Project 2: Milan Trip Planner -->
           <article class="project card">
-            <img loading="lazy" src="assets/images/fine-settimana-a-milano.jpg" width="480" height="270" alt="Screenshot of Milan Trip Planner website" />
+            <img loading="lazy" src="assets/images/fine-settimana-a-milano.jpg" width="480" height="270"
+              alt="Screenshot of Milan Trip Planner website" />
             <div class="project__content">
               <h3>Milan Trip Companion</h3>
-              <p>A sleek, mobile-friendly Milan weekend planner that bundles flights, stay details, maps, and day-by-day recommendations into one clean itinerary page.</p>
+              <p>A sleek, mobile-friendly Milan weekend planner that bundles flights, stay details, maps, and day-by-day
+                recommendations into one clean itinerary page.</p>
               <div class="project__actions">
-                <a class="btn" href="https://galcesana.com/Fine-Settimana-A-Milano/" target="_blank" rel="noopener">Live site</a>
+                <a class="btn" href="https://galcesana.com/Fine-Settimana-A-Milano/" target="_blank" rel="noopener">Live
+                  site</a>
               </div>
             </div>
           </article>
 
           <!-- Project 3: Pearls → NIS -->
           <article class="project card">
-            <img loading="lazy" src="assets/images/pearls-to-nis.jpg" width="480" height="270" alt="Screenshot of Pearls to NIS website for Tomorrowland" />
+            <img loading="lazy" src="assets/images/pearls-to-nis.jpg" width="480" height="270"
+              alt="Screenshot of Pearls to NIS website for Tomorrowland" />
             <div class="project__content">
               <h3>Pearls → NIS (Tomorrowland)</h3>
-              <p>A site for smart economy in Tomorrowland festival, it helps to convert Tomorrowland's currency (Pearls) to NIS and has a platform for sharing food price info around the festival grounds.</p>
+              <p>A site for smart economy in Tomorrowland festival, it helps to convert Tomorrowland's currency (Pearls)
+                to NIS and has a platform for sharing food price info around the festival grounds.</p>
               <div class="project__actions">
-                <a class="btn" href="https://galcesana.github.io/pearls-to-nis/" target="_blank" rel="noopener">Live site</a>
+                <a class="btn" href="https://galcesana.github.io/pearls-to-nis/" target="_blank" rel="noopener">Live
+                  site</a>
                 <!-- Optional: update to exact repo if different -->
-                <a class="btn btn--ghost" href="https://github.com/galcesana/pearls-to-nis" target="_blank" rel="noopener">Code</a>
+                <a class="btn btn--ghost" href="https://github.com/galcesana/pearls-to-nis" target="_blank"
+                  rel="noopener">Code</a>
               </div>
             </div>
           </article>
@@ -149,19 +158,19 @@
           <!-- Project 3: Please Don't Steal My Bike -->
           <article class="project card">
             <div class="project__media">
-              <img loading="lazy"
-                   src="assets/images/bike-site.jpg"
-                   width="480"
-                   height="270"
-                   alt="Screenshot of Please Don't Steal My Bike website" />
+              <img loading="lazy" src="assets/images/bike-site.jpg" width="480" height="270"
+                alt="Screenshot of Please Don't Steal My Bike website" />
             </div>
             <div class="project__content">
               <h3>Please Don't Steal My Bike</h3>
-              <p>A playful micro-site linked via QR code on my bicycle in Tel Aviv. When scanned, it proves ownership, shows contact info, and uses humor to discourage theft. 
+              <p>A playful micro-site linked via QR code on my bicycle in Tel Aviv. When scanned, it proves ownership,
+                shows contact info, and uses humor to discourage theft.
               </p>
               <div class="project__actions">
-                <a class="btn" href="https://galcesana.github.io/pls-dont-steal-my-bike/" target="_blank" rel="noopener">Live site</a>
-                <a class="btn btn--ghost" href="https://github.com/galcesana/pls-dont-steal-my-bike" target="_blank" rel="noopener">Code</a>
+                <a class="btn" href="https://galcesana.github.io/pls-dont-steal-my-bike/" target="_blank"
+                  rel="noopener">Live site</a>
+                <a class="btn btn--ghost" href="https://github.com/galcesana/pls-dont-steal-my-bike" target="_blank"
+                  rel="noopener">Code</a>
               </div>
             </div>
           </article>
@@ -169,12 +178,15 @@
           <!-- Project: HydroTrack -->
           <article class="project card">
             <div class="project__media hydrotrack__media">
-              <img loading="lazy" src="assets/images/hdyro%20tacking%201.jpeg" width="240" height="480" alt="HydroTrack screenshot 1" />
-              <img loading="lazy" src="assets/images/hdyro%20tacking%202.jpeg" width="240" height="480" alt="HydroTrack screenshot 2" />
+              <img loading="lazy" src="assets/images/hdyro%20tacking%201.jpeg" width="240" height="480"
+                alt="HydroTrack screenshot 1" />
+              <img loading="lazy" src="assets/images/hdyro%20tacking%202.jpeg" width="240" height="480"
+                alt="HydroTrack screenshot 2" />
             </div>
             <div class="project__content">
               <h3>💧 HydroTrack</h3>
-              <p>A sleek water tracking app that helps you build lasting hydration habits. Features quick logging, daily goals, streak tracking, visual history, and cloud sync across devices.</p>
+              <p>A sleek water tracking app that helps you build lasting hydration habits. Features quick logging, daily
+                goals, streak tracking, visual history, and cloud sync across devices.</p>
               <div class="project__actions">
                 <a class="btn" href="https://water.galcesana.com" target="_blank" rel="noopener">Live site</a>
               </div>
@@ -189,13 +201,8 @@
 
           <!-- Project: Evolution of Color-Naming Systems -->
           <article class="project card">
-            <img
-              loading="lazy"
-              src="assets/images/evolution-color-naming.jpg"
-              width="480"
-              height="270"
-              alt="Visualization from the Evolution of Color-Naming Systems simulation"
-            />
+            <img loading="lazy" src="assets/images/evolution-color-naming.jpg" width="480" height="270"
+              alt="Visualization from the Evolution of Color-Naming Systems simulation" />
             <div class="project__content">
               <h3>Evolution of Color-Naming Systems</h3>
               <p>
@@ -204,90 +211,61 @@
                 color-naming survey across multiple perceptual “environments.”
               </p>
               <div class="project__actions">
-                <a
-                  class="btn btn--ghost"
-                  href="https://github.com/galcesana/Evolution_of_Color_Naming_Systems"
-                  target="_blank"
-                  rel="noopener"
-                >Code</a>
-                <a
-                  class="btn"
+                <a class="btn btn--ghost" href="https://github.com/galcesana/Evolution_of_Color_Naming_Systems"
+                  target="_blank" rel="noopener">Code</a>
+                <a class="btn"
                   href="https://github.com/galcesana/Evolution_of_Color_Naming_Systems/blob/main/Presentation.pptx"
-                  target="_blank"
-                  rel="noopener"
-                >Slides</a>
+                  target="_blank" rel="noopener">Slides</a>
               </div>
             </div>
           </article>
 
           <!-- Project: CBIO Hackathon – MPN Phylogenies -->
           <article class="project card">
-            <img
-              loading="lazy"
-              src="assets/images/cbio-hackathon.jpg"
-              width="480"
-              height="270"
-              alt="Phylogenetic reconstruction results from the CBIO hackathon project"
-            />
+            <img loading="lazy" src="assets/images/cbio-hackathon.jpg" width="480" height="270"
+              alt="Phylogenetic reconstruction results from the CBIO hackathon project" />
             <div class="project__content">
               <h3>Computational Biology Hackathon: MPN Phylogenies</h3>
               <p>
-                Reproduced a published phylogenetic analysis of myeloproliferative neoplasms (MPNs) from single-cell–derived colony
-                SNVs: processed VCF data, computed Hamming distance matrices, reconstructed trees with Neighbor-Joining, inferred
-                ancestral states via maximum parsimony (Fitch), and estimated driver-mutation timing under a molecular-clock assumption.
+                Reproduced a published phylogenetic analysis of myeloproliferative neoplasms (MPNs) from
+                single-cell–derived colony
+                SNVs: processed VCF data, computed Hamming distance matrices, reconstructed trees with Neighbor-Joining,
+                inferred
+                ancestral states via maximum parsimony (Fitch), and estimated driver-mutation timing under a
+                molecular-clock assumption.
               </p>
               <div class="project__actions">
-                <a
-                  class="btn btn--ghost"
-                  href="https://github.com/galcesana/CBIO_Hackathon"
-                  target="_blank"
-                  rel="noopener"
-                >Code</a>
-                <a
-                  class="btn"
-                  href="assets/docs/Hackathon Report.pdf" 
-                  target="_blank"
-                  rel="noopener"
-                >Read more</a>
+                <a class="btn btn--ghost" href="https://github.com/galcesana/CBIO_Hackathon" target="_blank"
+                  rel="noopener">Code</a>
+                <a class="btn" href="assets/docs/Hackathon Report.pdf" target="_blank" rel="noopener">Read more</a>
               </div>
+            </div>
+          </article>
+
+          <!-- Project: First-Person Bias in LLM Persona Responses -->
+          <article class="project card">
+            <img loading="lazy" src="assets/images/first-person-bias.jpg" width="480" height="270"
+              alt="First-person vs third-person sentiment comparison in persona-prompted LLM responses" />
+            <div class="project__content">
+              <h3>First-Person Bias in LLMs</h3>
+              <p>
+                Studied “first-person bias” in persona-based LLM interactions: held persona attributes constant while
+                switching
+                grammatical perspective (I vs He/She), generated responses across 144 synthetic personas, and quantified
+                changes in
+                sentiment/engagement using a RoBERTa sentiment model and statistical tests across multiple open-source
+                LLMs.
+              </p>
+
+              <div class="project__actions">
+                <a class="btn btn--ghost" href="https://github.com/galcesana/first-person-bias" target="_blank"
+                  rel="noopener">Code</a>
+
+                <!-- Optional (recommended): upload your report PDF to the repo and link it here -->
+                <a class="btn" href="assets/docs/ANLP_project.pdf" target="_blank" rel="noopener">Report</a>
               </div>
-            </article>
-
-            <!-- Project: First-Person Bias in LLM Persona Responses -->
-            <article class="project card">
-              <img
-                loading="lazy"
-                src="assets/images/first-person-bias.jpg"
-                width="480"
-                height="270"
-                alt="First-person vs third-person sentiment comparison in persona-prompted LLM responses"
-              />
-              <div class="project__content">
-                <h3>First-Person Bias in LLMs</h3>
-                <p>
-                  Studied “first-person bias” in persona-based LLM interactions: held persona attributes constant while switching
-                  grammatical perspective (I vs He/She), generated responses across 144 synthetic personas, and quantified changes in
-                  sentiment/engagement using a RoBERTa sentiment model and statistical tests across multiple open-source LLMs.
-                </p>
-
-                <div class="project__actions">
-                  <a
-                    class="btn btn--ghost"
-                    href="https://github.com/galcesana/first-person-bias"
-                    target="_blank"
-                    rel="noopener"
-                  >Code</a>
-
-                  <!-- Optional (recommended): upload your report PDF to the repo and link it here -->
-                  <a
-                    class="btn"
-                    href="assets/docs/ANLP_project.pdf"
-                    target="_blank"
-                    rel="noopener"
-                  >Report</a>
-                </div>
-              </div>
-            </article>
+            </div>
+          </article>
 
 
 
@@ -295,39 +273,16 @@
       </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" class="section">
-      <div class="container reveal">
-        <h2>Skills</h2>
-        <div class="skills__grid">
-          <article class="card">
-            <h3>Languages</h3>
-            <p>Python, Go, C, C++, Java, JavaScript, HTML, SQL</p>
-          </article>
-          <article class="card">
-            <h3>Frameworks & Tools</h3>
-            <p>TensorFlow, PyTorch, scikit‑learn, Docker, Flask, Git, Linux</p>
-          </article>
-          <article class="card">
-            <h3>CS Fundamentals</h3>
-            <p>Data structures, algorithms, operating systems, concurrency, databases</p>
-          </article>
-          <article class="card">
-            <h3>Machine Learning</h3>
-            <p>Supervised/unsupervised learning, neural nets (CNN/RNN/LSTM), evaluation (AUC‑ROC), GANs, NLP</p>
-          </article>
-        </div>
-      </div>
-    </section>
+
 
     <!-- Resume -->
     <section id="resume" class="section">
       <div class="container narrow reveal">
-        <h2>Resume</h2>
-        <p>Grab a PDF copy of my current CV.</p>
+        <h2>my resume</h2>
         <p>
           <a class="btn" href="assets/docs/Gal-Cesana-CV.pdf" download>Download PDF</a>
-          <a class="btn btn--ghost" href="assets/docs/Gal-Cesana-CV.pdf" target="_blank" rel="noopener">Open in browser</a>
+          <a class="btn btn--ghost" href="assets/docs/Gal-Cesana-CV.pdf" target="_blank" rel="noopener">Open in
+            browser</a>
         </p>
       </div>
     </section>
@@ -335,18 +290,26 @@
     <!-- Contact -->
     <section id="contact" class="section section--alt">
       <div class="container reveal">
-        <h2>Contact & Links</h2>
+        <h2>some links</h2>
         <div class="contact">
           <a class="contact__item" href="mailto:galcesana8@gmail.com" aria-label="Send email">
             <span class="icon" aria-hidden="true">📧</span>
             <span>galcesana8@gmail.com</span>
           </a>
-          <a class="contact__item" href="https://www.linkedin.com/in/gal-cesana-844509217/" target="_blank" rel="me noopener" aria-label="LinkedIn profile">
-            <svg class="icon" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M20.45 20.45h-3.55V14.9c0-1.32-.03-3.01-1.84-3.01-1.84 0-2.12 1.43-2.12 2.91v5.65H9.39V9h3.41v1.56h.05c.47-.89 1.61-1.83 3.31-1.83 3.54 0 4.19 2.33 4.19 5.35v6.37ZM5.34 7.43a2.06 2.06 0 1 1 0-4.11 2.06 2.06 0 0 1 0 4.11Zm-1.78 13.02h3.57V9H3.56v11.45Z"/></svg>
+          <a class="contact__item" href="https://www.linkedin.com/in/gal-cesana-844509217/" target="_blank"
+            rel="me noopener" aria-label="LinkedIn profile">
+            <svg class="icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
+              <path
+                d="M20.45 20.45h-3.55V14.9c0-1.32-.03-3.01-1.84-3.01-1.84 0-2.12 1.43-2.12 2.91v5.65H9.39V9h3.41v1.56h.05c.47-.89 1.61-1.83 3.31-1.83 3.54 0 4.19 2.33 4.19 5.35v6.37ZM5.34 7.43a2.06 2.06 0 1 1 0-4.11 2.06 2.06 0 0 1 0 4.11Zm-1.78 13.02h3.57V9H3.56v11.45Z" />
+            </svg>
             <span>LinkedIn</span>
           </a>
-          <a class="contact__item" href="https://github.com/galcesana" target="_blank" rel="me noopener" aria-label="GitHub profile">
-            <svg class="icon" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.35-1.76-1.35-1.76-1.1-.75.08-.73.08-.73 1.22.09 1.86 1.25 1.86 1.25 1.08 1.84 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.45 11.45 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.62-5.47 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z"/></svg>
+          <a class="contact__item" href="https://github.com/galcesana" target="_blank" rel="me noopener"
+            aria-label="GitHub profile">
+            <svg class="icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
+              <path
+                d="M12 .5a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.35-1.76-1.35-1.76-1.1-.75.08-.73.08-.73 1.22.09 1.86 1.25 1.86 1.25 1.08 1.84 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.45 11.45 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.8 5.62-5.47 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z" />
+            </svg>
             <span>github.com/galcesana</span>
           </a>
         </div>
@@ -360,4 +323,5 @@
     </div>
   </footer>
 </body>
+
 </html>
