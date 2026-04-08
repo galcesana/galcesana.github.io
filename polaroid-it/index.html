@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>polaroid-it</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Work+Sans:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Heebo:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-base: #F7F6F3; 
@@ -23,7 +23,7 @@
         }
 
         body {
-            font-family: 'Work Sans', sans-serif;
+            font-family: 'Heebo', sans-serif;
             background-color: var(--bg-base);
             color: var(--ink-black);
             line-height: 1.5;
@@ -144,7 +144,7 @@
         }
 
         .btn {
-            font-family: 'Work Sans', sans-serif;
+            font-family: 'Heebo', sans-serif;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -214,7 +214,7 @@
 
     <div class="container">
         <div class="back-link">
-            <button class="btn btn-outline" type="button" onclick="goBack()">Back</button>
+            <button class="btn btn-outline" style="width: auto; padding: 10px 20px;" type="button" onclick="goBack()">Back</button>
         </div>
         <div class="controls">
             <div>
@@ -231,7 +231,7 @@
 
             <div class="input-group">
                 <label for="captionInput">Caption (Sharpie Style)</label>
-                <input type="text" id="captionInput" placeholder="New York, 2016..." maxlength="35">
+                <input type="text" id="captionInput" placeholder="Tel Aviv, 2016..." maxlength="35" dir="auto">
             </div>
 
             <div class="button-group">
@@ -361,12 +361,29 @@
             if (caption) {
                 ctx.fillStyle = '#1A1A1A'; 
                 ctx.save();
-                ctx.translate(P_WIDTH / 2, P_HEIGHT - (BORDER_BOTTOM / 2) + 5);
-                ctx.rotate(-0.02); 
                 
-                ctx.font = '46px Caveat, cursive';
+                // Move to the bottom center of the polaroid
+                ctx.translate(P_WIDTH / 2, P_HEIGHT - (BORDER_BOTTOM / 2) + 5);
+                ctx.rotate(-0.02); // Slight authentic tilt
+                
                 ctx.textAlign = 'center';
                 ctx.textBaseline = 'middle';
+                
+                // --- DYNAMIC FONT SCALING FOR AMATIC SC ---
+                let fontSize = 65; // Starting max font size adjusted for Amatic SC
+                const fontFace = '"Amatic SC", cursive';
+                ctx.font = `${fontSize}px ${fontFace}`;
+                
+                // Calculate max allowed width (image width minus 40px for padding)
+                const maxTextWidth = IMAGE_SIZE - 40; 
+                
+                // Loop to shrink the font if the text is too wide
+                while (ctx.measureText(caption).width > maxTextWidth && fontSize > 24) {
+                    fontSize--;
+                    ctx.font = `${fontSize}px ${fontFace}`;
+                }
+                
+                // Draw the text with the newly calculated font size
                 ctx.fillText(caption, 0, 0);
                 ctx.restore();
             }
