@@ -8,8 +8,8 @@ Personal portfolio site for **Gal Cesana** — Software Engineer at CrowdStrike,
 
 - **About** — background, education, current role
 - **Now** — what I'm up to these days
-- **Projects** — [HUJI RUN](https://huji-run.galcesana.com), [Water Tracker](https://water.galcesana.com), [CV Tailor](https://cv-tailor-1093941780877.europe-west1.run.app/)
-- **Research** — persona-based sentiment analysis with LLMs, blood cancer phylogenetics
+- **Projects** — [HUJI Run](https://huji-run.galcesana.com), [NBA Predict](https://nba-predict-gc.streamlit.app/), Pikod
+- **Research** — blood cancer phylogenetics and first-person bias in LLMs
 - **Links** — GitHub, LinkedIn, resume, email
 
 ## Tech stack
